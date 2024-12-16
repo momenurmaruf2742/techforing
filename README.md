@@ -75,7 +75,7 @@ now use this `Bearer <token>` in swagger ui authorizations field
 Once the server is running, visit the following URL to access the Swagger UI for API documentation:
 
 <http://127.0.0.1:8000/swagger/>
-#### Optinal API Documentation
+#### Optional API Documentation
 ##### API Documentation (Postman)
 
 <https://documenter.getpostman.com/view/16358865/2sAYHzH3ov>
@@ -416,5 +416,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Contributors
 Momenur Islam
 
-This `README.md` includes installation steps, API endpoint descriptions, and instructions for accessing the Swagger UI for your project. You can copy and paste this into your `README.md` file. Let me know if you need further adjustments!
+This `README.md` includes installation steps, API endpoint descriptions, and instructions for accessing the Swagger UI for your project.
 ```
