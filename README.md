@@ -68,14 +68,14 @@ now use this `Bearer <token>` in swagger ui authorizations field
 
 ### 6. Run the development server
 
-python manage.py runserver
+```python manage.py runserver```
 
 API Documentation (Swagger)
 Once the server is running, visit the following URL to access the Swagger UI for API documentation:
 
 <http://127.0.0.1:8000/swagger/>
 
-API Endpoints
+# API Endpoints
 
 # Users
 
@@ -84,19 +84,19 @@ API Endpoints
 `POST /api/users/register/`
 
 ###### Body
-
+```
 json
 
 {
   "username": "user1",
-  "email": "<user1@example.com>",
+  "email": "user1@example.com",
   "password": "password123",
   "first_name": "John",
   "last_name": "Doe"
 }
-
+```
 ### Login User
-
+```
 POST /api/users/login/
 Body:
 json
@@ -111,50 +111,50 @@ json
 {
   "access_token": "your_access_token"
 }
-
+```
 ### Get User Details
-
-GET /api/users/{id}/\
+```
+GET /api/users/{id}/
 Response:
 json
 
 {
   "id": 1,
   "username": "user1",
-  "email": "<user1@example.com>",
+  "email": "user1@example.com",
   "first_name": "John",
   "last_name": "Doe"
 }
-
+```
 ### Update User
-
-PUT /api/users/{id}/\
-Body:\
+```
+PUT /api/users/{id}/
+Body:
 json
 
 {
   "username": "updated_username",
-  "email": "<updated_email@example.com>",
+  "email": "updated_email@example.com",
   "first_name": "John",
   "last_name": "Doe"
 }
-
+```
 ### Delete User
-
-DELETE /api/users/{id}/\
+```
+DELETE /api/users/{id}/
 Response:
 json
 
 {
   "message": "User deleted successfully"
 }
-
+```
 # Projects
 
 ### List Projects
-
-GET /api/projects/\
-Response:\
+```
+GET /api/projects/
+Response:
 json
 
 [
@@ -166,10 +166,10 @@ json
     "created_at": "2024-12-16T12:00:00Z"
   }
 ]
-
+```
 ### Create Project
-
-POST /api/projects/\
+```
+POST /api/projects/
 Body:
 json
 
@@ -178,10 +178,10 @@ json
   "description": "Description of new project",
   "owner": 1
 }
-
+```
 ### Retrieve Project
-
-GET /api/projects/{id}/\
+```
+GET /api/projects/{id}/
 Response:
 json
 
@@ -192,10 +192,10 @@ json
   "owner": 1,
   "created_at": "2024-12-16T12:00:00Z"
 }
-
+```
 ### Update Project
-
-PUT /api/projects/{id}/\
+```
+PUT /api/projects/{id}/
 Body:
 json
 
@@ -204,22 +204,22 @@ json
   "description": "Updated description",
   "owner": 1
 }
-
+```
 ### Delete Project
-
-DELETE /api/projects/{id}/\
+```
+DELETE /api/projects/{id}/
 Response:
 json
 
 {
   "message": "Project deleted successfully"
 }
-
+```
 # Tasks
 
 ### List Tasks
-
-GET /api/projects/{project_id}/tasks/\
+```
+GET /api/projects/{project_id}/tasks/
 Response:
 json
 
@@ -236,10 +236,10 @@ json
     "due_date": "2024-12-20T12:00:00Z"
   }
 ]
-
+```
 ### Create Task
-
-POST /api/projects/{project_id}/tasks/\
+```
+POST /api/projects/{project_id}/tasks/
 Body:
 json
 
@@ -252,10 +252,10 @@ json
   "project": 1,
   "due_date": "2024-12-20T12:00:00Z"
 }
-
+```
 ### Retrieve Task
-
-GET /api/tasks/{id}/\
+```
+GET /api/tasks/{id}/
 Response:
 json
 
@@ -270,10 +270,10 @@ json
   "created_at": "2024-12-16T12:00:00Z",
   "due_date": "2024-12-20T12:00:00Z"
 }
-
+```
 ### Update Task
-
-PUT /api/tasks/{id}/\
+```
+PUT /api/tasks/{id}/
 Body:
 json
 
@@ -286,22 +286,22 @@ json
   "project": 1,
   "due_date": "2024-12-21T12:00:00Z"
 }
-
+```
 ### Delete Task
-
-DELETE /api/tasks/{id}/\
+```
+DELETE /api/tasks/{id}/
 Response:
 json
 
 {
   "message": "Task deleted successfully"
 }
-
+```
 # Comments
 
 ### List Comments
-
-GET /api/tasks/{task_id}/comments/\
+```
+GET /api/tasks/{task_id}/comments/
 Response:
 json
 
@@ -314,10 +314,10 @@ json
     "created_at": "2024-12-16T12:00:00Z"
   }
 ]
-
+```
 ### Create Comment
-
-POST /api/tasks/{task_id}/comments/\
+```
+POST /api/tasks/{task_id}/comments/
 Body:
 json
 
@@ -326,10 +326,10 @@ json
   "user": 1,
   "task": 1
 }
-
+```
 ### Retrieve Comment
-
-GET /api/comments/{id}/\
+```
+GET /api/comments/{id}/
 Response:
 json
 
@@ -340,10 +340,10 @@ json
   "task": 1,
   "created_at": "2024-12-16T12:00:00Z"
 }
-
+```
 ### Update Comment
-
-PUT /api/comments/{id}/\
+```
+PUT /api/comments/{id}/
 Body:
 json
 
@@ -352,16 +352,18 @@ json
   "user": 1,
   "task": 1
 }
-
+```
 ### Delete Comment
 
-DELETE /api/comments/{id}/\
+```
+DELETE /api/comments/{id}/
 Response:
 json
 
 {
   "message": "Comment deleted successfully"
 }
+```
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -372,3 +374,4 @@ Contributors
 Momenur Islam
 
 This `README.md` includes installation steps, API endpoint descriptions, and instructions for accessing the Swagger UI for your project. You can copy and paste this into your `README.md` file. Let me know if you need further adjustments!
+```
