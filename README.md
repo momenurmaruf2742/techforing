@@ -70,10 +70,15 @@ now use this `Bearer <token>` in swagger ui authorizations field
 
 ```python manage.py runserver```
 
-API Documentation (Swagger)
+##### API Documentation (Swagger)
+
 Once the server is running, visit the following URL to access the Swagger UI for API documentation:
 
 <http://127.0.0.1:8000/swagger/>
+#### Optinal API Documentation
+##### API Documentation (Postman)
+
+<https://documenter.getpostman.com/view/16358865/2sAYHzH3ov>
 
 # API Endpoints
 
@@ -84,6 +89,7 @@ Once the server is running, visit the following URL to access the Swagger UI for
 `POST /api/users/register/`
 
 ###### Body
+
 ```
 json
 
@@ -95,7 +101,9 @@ json
   "last_name": "Doe"
 }
 ```
+
 ### Login User
+
 ```
 POST /api/users/login/
 Body:
@@ -112,7 +120,9 @@ json
   "access_token": "your_access_token"
 }
 ```
+
 ### Get User Details
+
 ```
 GET /api/users/{id}/
 Response:
@@ -126,7 +136,9 @@ json
   "last_name": "Doe"
 }
 ```
+
 ### Update User
+
 ```
 PUT /api/users/{id}/
 Body:
@@ -139,7 +151,9 @@ json
   "last_name": "Doe"
 }
 ```
+
 ### Delete User
+
 ```
 DELETE /api/users/{id}/
 Response:
@@ -149,9 +163,11 @@ json
   "message": "User deleted successfully"
 }
 ```
+
 # Projects
 
 ### List Projects
+
 ```
 GET /api/projects/
 Response:
@@ -167,7 +183,9 @@ json
   }
 ]
 ```
+
 ### Create Project
+
 ```
 POST /api/projects/
 Body:
@@ -179,7 +197,9 @@ json
   "owner": 1
 }
 ```
+
 ### Retrieve Project
+
 ```
 GET /api/projects/{id}/
 Response:
@@ -193,7 +213,9 @@ json
   "created_at": "2024-12-16T12:00:00Z"
 }
 ```
+
 ### Update Project
+
 ```
 PUT /api/projects/{id}/
 Body:
@@ -205,7 +227,9 @@ json
   "owner": 1
 }
 ```
+
 ### Delete Project
+
 ```
 DELETE /api/projects/{id}/
 Response:
@@ -215,9 +239,11 @@ json
   "message": "Project deleted successfully"
 }
 ```
+
 # Tasks
 
 ### List Tasks
+
 ```
 GET /api/projects/{project_id}/tasks/
 Response:
@@ -237,7 +263,9 @@ json
   }
 ]
 ```
+
 ### Create Task
+
 ```
 POST /api/projects/{project_id}/tasks/
 Body:
@@ -253,7 +281,9 @@ json
   "due_date": "2024-12-20T12:00:00Z"
 }
 ```
+
 ### Retrieve Task
+
 ```
 GET /api/tasks/{id}/
 Response:
@@ -271,7 +301,9 @@ json
   "due_date": "2024-12-20T12:00:00Z"
 }
 ```
+
 ### Update Task
+
 ```
 PUT /api/tasks/{id}/
 Body:
@@ -287,7 +319,9 @@ json
   "due_date": "2024-12-21T12:00:00Z"
 }
 ```
+
 ### Delete Task
+
 ```
 DELETE /api/tasks/{id}/
 Response:
@@ -297,9 +331,11 @@ json
   "message": "Task deleted successfully"
 }
 ```
+
 # Comments
 
 ### List Comments
+
 ```
 GET /api/tasks/{task_id}/comments/
 Response:
@@ -315,7 +351,9 @@ json
   }
 ]
 ```
+
 ### Create Comment
+
 ```
 POST /api/tasks/{task_id}/comments/
 Body:
@@ -327,7 +365,9 @@ json
   "task": 1
 }
 ```
+
 ### Retrieve Comment
+
 ```
 GET /api/comments/{id}/
 Response:
@@ -341,7 +381,9 @@ json
   "created_at": "2024-12-16T12:00:00Z"
 }
 ```
+
 ### Update Comment
+
 ```
 PUT /api/comments/{id}/
 Body:
@@ -353,6 +395,7 @@ json
   "task": 1
 }
 ```
+
 ### Delete Comment
 
 ```
